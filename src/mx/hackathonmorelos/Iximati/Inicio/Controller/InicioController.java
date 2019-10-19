@@ -16,6 +16,12 @@ public class InicioController extends HttpServlet {
         String accion= request.getParameter("accion") == null ? "" : request.getParameter("accion");
         PrintWriter out = response.getWriter();
         switch (accion) {
+            case "informacion":{
+                System.out.println("Entre a Informacion");
+                response.sendRedirect("InformacionController");
+
+                break;
+            }
             case "login":{
                 System.out.println("Entre a Login");
                 response.sendRedirect("LoginController");

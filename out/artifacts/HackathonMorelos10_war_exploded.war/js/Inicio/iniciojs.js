@@ -7,11 +7,27 @@ $(document).ready(() => {
                         Swal.showLoading();
                     }
                 });
-                $("#InicioSesion").attr("action", "InicioController");
+                $("#Informacion").attr("action", "InicioController");
                 $("#accion").val("login");
-                $("#InicioSesion").attr("method", "POST");
-                $("#InicioSesion").submit();
+                $("#Informacion").attr("method", "POST");
+                $("#Informacion").submit();
 
     });
+    $(".btnInformacion").click(function () {
+
+        Swal.fire({
+            title: 'Cargando...',
+            onBeforeOpen: () => {
+                Swal.showLoading();
+            }
+        });
+
+        $("#Informacion").attr("action", "InicioController");
+        $("#accion").val("informacion");
+        $("#Informacion").attr("method", "POST");
+        $("#Informacion").submit();
+
+    });
+
 
 });

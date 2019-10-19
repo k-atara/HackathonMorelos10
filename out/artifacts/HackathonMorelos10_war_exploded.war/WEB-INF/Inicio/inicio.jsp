@@ -15,6 +15,7 @@
     <script src="${pageContext.request.contextPath}/js/fontawesome.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/jquery-3.4.1.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/Inicio/iniciojs.js"></script>
+    <script src="${pageContext.request.contextPath}/js/Informacion/informacionjs.js"></script>
 
     <!-- Custom fonts for this template -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
@@ -34,6 +35,132 @@
     <script src="${pageContext.request.contextPath}/js/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/sweetalert2.min.css"/>
 
+    <!--    Watson     -->
+    <link href="/web/carbon-components/css/carbon-components.min.css" rel="stylesheet" />
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+
+        body {
+            background: #f7f7f7;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .Chat__header {
+            text-align: center;
+            padding-top: 32px;
+            width: 100%;
+        }
+
+        .Chat__header h1, .Chat__header h1 a {
+            font-size: 1.2rem;
+        }
+
+        .Chat__holder,
+        .Chat__body {
+            border-radius: 0.5em;
+        }
+
+        .Chat__holder {
+            background: #f7f7f7;
+            height: 540px;
+            margin: 32px auto 0 auto;
+            width: 320px;
+        }
+
+        .Chat__title {
+            background: #0062ff;
+        }
+
+        .Chat__body {
+            height: 540px;
+            width: 320px;
+            max-height: calc(100vh - 140px);
+        }
+
+        .Chat__body--loading {
+            text-align: center;
+        }
+
+        .Chat__body--loading .bx--loading {
+            margin: auto;
+        }
+
+        .Chat__404 {
+            text-align: center;
+        }
+
+        .Chat__loading {
+            margin: auto;
+            text-align: center;
+            width: 64px;
+        }
+
+        .link-icon {
+            fill: #0062ff;
+        }
+
+        /**
+         * We're picking up font-faces from carbon but those appear out-of-date and the semibold versions contained within
+         * appear to have some defects in them. See https://github.ibm.com/watson-engagement-advisor/wea-backlog/issues/26907.
+         * The definitions below are copied from an upcoming version of carbon and can be removed once it's available.
+         */
+        @font-face {
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 600;
+            src: local('IBM Plex Sans SemiBold'), local('IBMPlexSans-SemiBold'),
+            url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIxsdP3pBmtF8A.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+            U+FE2E-FE2F;
+        }
+        @font-face {
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 600;
+            src: local('IBM Plex Sans SemiBold'), local('IBMPlexSans-SemiBold'),
+            url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIVsdP3pBmtF8A.woff2) format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        @font-face {
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 600;
+            src: local('IBM Plex Sans SemiBold'), local('IBMPlexSans-SemiBold'),
+            url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIJsdP3pBmtF8A.woff2) format('woff2');
+            unicode-range: U+0370-03FF;
+        }
+        @font-face {
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 600;
+            src: local('IBM Plex Sans SemiBold'), local('IBMPlexSans-SemiBold'),
+            url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AI5sdP3pBmtF8A.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+        }
+        @font-face {
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 600;
+            src: local('IBM Plex Sans SemiBold'), local('IBMPlexSans-SemiBold'),
+            url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AI9sdP3pBmtF8A.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        @font-face {
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 600;
+            src: local('IBM Plex Sans SemiBold'), local('IBMPlexSans-SemiBold'),
+            url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIFsdA.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
+            U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -41,7 +168,7 @@
 <!-- Navigation -->
 <%@include file="../../navBar.jsp"%>
 
-<form id="InicioSesion">
+<form id="Informacion">
     <input type="hidden" name="accion" id="accion">
 </form>
 
@@ -55,7 +182,7 @@
                         <img src="${pageContext.request.contextPath}/img/cuernavaca.png" id="cuernavaca" with="100" height="100">
                     </div>
                     <h3>Cuernavaca</h3>
-                    <button type="button" class="btn btn-primary btnVerMasCva" id="masCva">Ver m&aacutes...</button>
+                    <button type="button" class="btn btn-primary btnInformacion" id="masCva">Ver m&aacutes...</button>
                 </div>
             </div>
             <div class="col-lg-2">
@@ -64,7 +191,7 @@
                         <img src="${pageContext.request.contextPath}/img/Cuautla.png" id="cuautla" with="100" height="100">
                     </div>
                     <h3>Cuautla</h3>
-                    <button type="button" class="btn btn-primary" id="masCuautla">Ver m&aacutes...</button>
+                    <button type="button" class="btn btn-primary btnInformacion" id="masCuautla">Ver m&aacutes...</button>
                 </div>
             </div>
             <div class="col-lg-2">
@@ -73,7 +200,7 @@
                         <img src="${pageContext.request.contextPath}/img/yautepec.png" id="yautepec" with="100" height="100">
                     </div>
                     <h3>Yautepec</h3>
-                    <button type="button" class="btn btn-primary" id="masYautepec">Ver m&aacutes...</button>
+                    <button type="button" class="btn btn-primary btnInformacion" id="masYautepec">Ver m&aacutes...</button>
                 </div>
             </div>
             <div class="col-lg-2">
@@ -82,7 +209,7 @@
                         <img src="${pageContext.request.contextPath}/img/tepoztlan.jpg" id="tepoztlan" with="100" height="100">
                     </div>
                     <h3>Tepoztl&aacuten</h3>
-                    <button type="button" class="btn btn-primary" id="masTepoz">Ver m&aacutes...</button>
+                    <button type="button" class="btn btn-primary btnInformacion" id="masTepoz">Ver m&aacutes...</button>
                 </div>
             </div>
             <div class="col-lg-2">
@@ -91,7 +218,7 @@
                         <img src="${pageContext.request.contextPath}/img/amacuzac.jpg" id="amacuzac" with="100" height="100">
                     </div>
                     <h3>Amacuzac</h3>
-                    <button type="button" class="btn btn-primary" id="masAmacuzac">Ver m&aacutes...</button>
+                    <button type="button" class="btn btn-primary btnInformacion" id="masAmacuzac">Ver m&aacutes...</button>
                 </div>
             </div>
             <div class="col-lg-2">
@@ -202,6 +329,48 @@
         </div>
     </div>
 </section>
+
+<div class="watson" style="position:fixed; bottom:0; right:0; float:left;">
+    <div class='Chat__header' role='banner'>
+
+    </div>
+    <div class='Chat__holder'>
+        <div class='Chat__body Chat__body--loading' role='main'>
+            <div data-loading class="bx--loading">
+                <svg class="bx--loading__svg" viewBox="-75 -75 150 150">
+                    <title>Loading</title>
+                    <circle class="bx--loading__stroke" cx="0" cy="0" r="37.5" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
+    <script>
+        var hostElement = document.querySelector('.Chat__body');
+        var loadingElement = document.querySelector('.bx--loading');
+        window.loadWatsonAssistantChat({
+            element: hostElement,
+            integrationID: '3bca5994-8390-4ea8-b772-810608cfc972',
+            showLauncher: false,
+            openChatByDefault: true,
+            region: 'us-south',
+            subscriptionID: 'public',
+            __ibm__: {
+                cdnEndpoint: 'https://assistant-web.watsonplatform.net',
+                versionsUrl: 'https://assistant-web.watsonplatform.net/versions.json',
+                isPreviewLink: true
+            }
+        }).then(function (instance) {
+            window.instance = instance;
+            instance.render().then(function () {
+                loadingElement.parentNode.removeChild(loadingElement);
+                hostElement.classList.remove('Chat__body--loading');
+                hostElement.classList.add('Chat__body--background');
+            });
+        });
+    </script>
+</div>
 
 <%@include file="../../footer.jsp"%>
 
