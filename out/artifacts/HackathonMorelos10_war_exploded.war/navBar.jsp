@@ -3,7 +3,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-light bg-light static-top">
     <div class="container">
-        <img src="${pageContext.request.contextPath}/img/agricultura.jpeg" id="imagenLogo" >
+        <img src="${pageContext.request.contextPath}/img/indice.jpg" id="imagenLogo" >
         <a class="navbar-brand" href="#">Iximati:</a>
         <a class="btn btn-primary" href="#">Iniciar sesión</a>
     </div>
