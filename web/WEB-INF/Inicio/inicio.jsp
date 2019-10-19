@@ -65,7 +65,7 @@
             <div class="col-lg-4">
                 <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                     <div>
-                        <img src="../../img/cuernavaca.png" id="cuernavaca" with="100" height="100">
+                        <img src="${pageContext.request.contextPath}/img/cuernavaca.png" id="cuernavaca" with="100" height="100">
                     </div>
                     <h3>Cuernavaca</h3>
                     <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
@@ -73,8 +73,8 @@
             </div>
             <div class="col-lg-4">
                 <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                    <div class="features-icons-icon d-flex">
-                        <i class="icon-layers m-auto text-primary"></i>
+                    <div>
+                        <img src="${pageContext.request.contextPath}/img/Cuautla.png" id="cuautla" with="100" height="100">
                     </div>
                     <h3>Cuautla</h3>
                     <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
@@ -82,8 +82,8 @@
             </div>
             <div class="col-lg-4">
                 <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                    <div class="features-icons-icon d-flex">
-                        <i class="icon-check m-auto text-primary"></i>
+                    <div>
+                        <img src="${pageContext.request.contextPath}/img/yautepec.png" id="yautepec" with="100" height="100">
                     </div>
                     <h3>Yautepec</h3>
                     <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
@@ -91,8 +91,8 @@
             </div>
             <div class="col-lg-4">
                 <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                    <div class="features-icons-icon d-flex">
-                        <i class="icon-check m-auto text-primary"></i>
+                    <div>
+                        <img src="${pageContext.request.contextPath}/img/tepoztlan.jpg" id="tepoztlan" with="100" height="100">
                     </div>
                     <h3>Tepoztlan</h3>
                     <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
@@ -100,8 +100,8 @@
             </div>
             <div class="col-lg-4">
                 <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                    <div class="features-icons-icon d-flex">
-                        <i class="icon-check m-auto text-primary"></i>
+                    <div>
+                        <img src="${pageContext.request.contextPath}/img/amacuzac.jpg" id="amacuzac" with="100" height="100">
                     </div>
                     <h3>Amacuzac</h3>
                     <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
