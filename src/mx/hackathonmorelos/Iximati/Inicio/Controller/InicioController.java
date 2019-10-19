@@ -22,6 +22,12 @@ public class InicioController extends HttpServlet {
 
                 break;
             }
+            case "informacionCuautla":{
+                System.out.println("Entre a Informacion");
+                response.sendRedirect("GestorController");
+
+                break;
+            }
             case "login":{
                 System.out.println("Entre a Login");
                 response.sendRedirect("LoginController");

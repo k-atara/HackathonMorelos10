@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Inicio</title>
+    <title>Informaci&oacuten</title>
 
 
     <script src="${pageContext.request.contextPath}/js/all.min.js"></script>
@@ -70,7 +70,7 @@
         <div class="col-md-12 ml-auto mr-auto text-center">
             <div class="card-header card-header-primary">
                 <div class="mt-1 ml-1" id="preview">
-
+                    <h1>Cuernavaca</h1>
                 </div>
             </div>
         </div>
@@ -80,21 +80,176 @@
                     <table id="tablaContratos" class="display" style="width:100%">
                         <thead>
                         <tr>
-                            <th scope="col">Contratos</th>
-                            <th scope="col">Ejemplo 1</th>
-                            <th scope="col">Ejemplo 1</th>
-                            <th scope="col">Ejemplo 1</th>
-                            <th scope="col">Ejemplo 1</th>
+                            <th scope="col">Hiperv&iacutenculo Al Contrato, Convenio, Permiso, Licencia O Concesi&oacuten</th>
+                            <th scope="col">N&uacutemero de registros</th>
                         </tr>
                         </thead>
                         <tbody id="cuerpoTablaContratos">
 
                         <tr>
-                            <td>Ejemplo</td>
-                            <td>Ejemplo</td>
-                            <td>Ejemplo</td>
-                            <td>Ejemplo</td>
-                            <td>Ejemplo</td>
+                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0002030405-.pdf
+                           ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0002030405-.pdf
+                            </a> </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0002060782-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0002090698-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0002090699-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003012658-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003012659-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003030419-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr><tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003160064-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003170659-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003300783-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003300784-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003310709-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003310710-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003310711-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003370424-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003420258-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003430216-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003481724-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003501021-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524042-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524043-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524044-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524045-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524046-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524047-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524047-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524048-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524049-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524050-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524051-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524052-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524053-.pdf
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524054-.pdf
+                            </td>
+                            <td>1</td>
                         </tr>
 
                         </tbody>
@@ -102,49 +257,42 @@
                     </table>
                 </div>
                 <div class="col-lg-12 SectorPrivado">
-                <table id="tablaSectorPrivado" class="display" style="width:100%">
-                    <thead>
-                    <tr>
-                        <th scope="col">Sector Privado</th>
-                        <th scope="col">Ejemplo 1</th>
-                        <th scope="col">Ejemplo 1</th>
-                        <th scope="col">Ejemplo 1</th>
-                        <th scope="col">Ejemplo 1</th>
-                    </tr>
-                    </thead>
-                    <tbody id="cuerpoTablaSectorPrivado">
+                    <table id="tablaSectorPrivado" class="display" style="width:100%">
+                        <thead>
+                        <tr>
+                            <th scope="col">Ayuntamiento</th>
+                            <th scope="col">Sector Al Cual Se Otorgó El Acto Jurídico (catálogo)</th>
+                            <th scope="col">Número de registros</th>
+                        </tr>
+                        </thead>
+                        <tbody id="cuerpoTablaSectorPrivado">
 
-                    <tr>
-                        <td>Ejemplo</td>
-                        <td>Ejemplo</td>
-                        <td>Ejemplo</td>
-                        <td>Ejemplo</td>
-                        <td>Ejemplo</td>
-                    </tr>
+                        <tr>
+                            <td>Cuernavaca</td>
+                            <td>Privado</td>
+                            <td>866</td>
+                        </tr>
 
-                    </tbody>
+                        </tbody>
 
-                </table>
+                    </table>
             </div>
                 <div class="col-lg-12 SectorPublico">
                     <table id="tablaSectorPublico" class="display" style="width:100%">
                         <thead>
                         <tr>
-                            <th scope="col">Sector Publico</th>
-                            <th scope="col">Ejemplo 1</th>
-                            <th scope="col">Ejemplo 1</th>
-                            <th scope="col">Ejemplo 1</th>
-                            <th scope="col">Ejemplo 1</th>
+                            <th scope="col">Ayuntamiento
+                            </th>
+                            <th scope="col">Sector Al Cual Se Otorgó El Acto Jurídico (catálogo)
+                            </th>
+                            <th scope="col">Número de registros
+                            </th>
                         </tr>
                         </thead>
                         <tbody id="cuerpoTablaSectorPublico">
 
                         <tr>
-                            <td>Ejemplo</td>
-                            <td>Ejemplo</td>
-                            <td>Ejemplo</td>
-                            <td>Ejemplo</td>
-                            <td>Ejemplo</td>
+
                         </tr>
 
                         </tbody>
@@ -155,21 +303,23 @@
                     <table id="tablaInstrumentacion" class="display" style="width:100%">
                         <thead>
                         <tr>
-                            <th scope="col">Instrumentacion</th>
-                            <th scope="col">Ejemplo 1</th>
-                            <th scope="col">Ejemplo 1</th>
-                            <th scope="col">Ejemplo 1</th>
-                            <th scope="col">Ejemplo 1</th>
+                            <th scope="col">Ayuntamiento
+                            </th>
+                            <th scope="col">Unidad(es) O Área(s) Responsable(s) de Instrumentación
+                            </th>
+                            <th scope="col">Número de registros
+                            </th>
                         </tr>
                         </thead>
                         <tbody id="cuerpoInstrumentacion">
 
                         <tr>
-                            <td>Ejemplo</td>
-                            <td>Ejemplo</td>
-                            <td>Ejemplo</td>
-                            <td>Ejemplo</td>
-                            <td>Ejemplo</td>
+                            <td>Cuernavaca
+                            </td>
+                            <td>DIRECCION DE LICENCIAS DE FUNCIONAMIENTO
+                            </td>
+                            <td>866
+                            </td>
                         </tr>
 
                         </tbody>
@@ -187,6 +337,7 @@
 <!-- Bootstrap core JavaScript -->
 <script src="${pageContext.request.contextPath}/vendor/jquery/jquery.min.js"></script>
 <script src="${pageContext.request.contextPath}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/Informacion/informacionjs.js"></script>
 
 </body>
 

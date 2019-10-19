@@ -28,6 +28,20 @@ $(document).ready(() => {
         $("#Informacion").submit();
 
     });
+    $(".btnInformacionCuautla").click(function () {
 
+        Swal.fire({
+            title: 'Cargando...',
+            onBeforeOpen: () => {
+                Swal.showLoading();
+            }
+        });
+
+        $("#Informacion").attr("action", "InicioController");
+        $("#accion").val("informacionCuautla");
+        $("#Informacion").attr("method", "POST");
+        $("#Informacion").submit();
+
+    });
 
 });

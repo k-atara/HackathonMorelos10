@@ -10,7 +10,6 @@
 
     <title>Inicio</title>
 
-
     <script src="${pageContext.request.contextPath}/js/all.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/fontawesome.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/jquery-3.4.1.min.js"></script>
@@ -191,7 +190,7 @@
                         <img src="${pageContext.request.contextPath}/img/Cuautla.png" id="cuautla" with="100" height="100">
                     </div>
                     <h3>Cuautla</h3>
-                    <button type="button" class="btn btn-primary btnInformacion" id="masCuautla">Ver m&aacutes...</button>
+                    <button type="button" class="btn btn-primary btnInformacionCuautla" id="masCuautla">Ver m&aacutes...</button>
                 </div>
             </div>
             <div class="col-lg-2">
