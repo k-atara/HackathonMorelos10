@@ -11,6 +11,11 @@
     <title>Inicio</title>
 
 
+    <script src="${pageContext.request.contextPath}/js/all.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/fontawesome.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/jquery-3.4.1.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/Inicio/iniciojs.js"></script>
+
     <!-- Custom fonts for this template -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/css/fontawesome.min.css" rel="stylesheet">
@@ -22,10 +27,12 @@
 
     <!-- Custom styles for this template -->
     <link href="${pageContext.request.contextPath}/css/landing-page.css" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fontawesome.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/all.min.css">
 
-    <script src="${pageContext.request.contextPath}/js/all.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/fontawesome.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/jquery-3.4.1.min.js"></script>
+    <!--    Sweet Alerts     -->
+    <script src="${pageContext.request.contextPath}/js/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/sweetalert2.min.css"/>
 
 </head>
 
@@ -34,86 +41,66 @@
 <!-- Navigation -->
 <%@include file="../../navBar.jsp"%>
 
-<!-- Masthead -->
-<header class="masthead text-white text-center">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-9 mx-auto">
-                <h1 class="mb-5">Portal de datos del estado de Morelos</h1>
-            </div>
-            <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                <form>
-                    <div class="form-row">
-                        <div class="col-12 col-md-9 mb-2 mb-md-0">
-                            <input type="email" class="form-control form-control-lg" placeholder="Ingresa tu busqueda...">
-                        </div>
-                        <div class="col-12 col-md-3">
-                            <button type="submit" class="btn btn-block btn-lg btn-primary">Buscar</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</header>
+<form id="InicioSesion">
+    <input type="hidden" name="accion" id="accion">
+</form>
 
 <!-- Icons Grid -->
 <section class="features-icons bg-light text-center">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-2">
                 <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                     <div>
                         <img src="${pageContext.request.contextPath}/img/cuernavaca.png" id="cuernavaca" with="100" height="100">
                     </div>
                     <h3>Cuernavaca</h3>
-                    <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+                    <button type="button" class="btn btn-primary btnVerMasCva" id="masCva">Ver m&aacutes...</button>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-2">
                 <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                     <div>
                         <img src="${pageContext.request.contextPath}/img/Cuautla.png" id="cuautla" with="100" height="100">
                     </div>
                     <h3>Cuautla</h3>
-                    <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+                    <button type="button" class="btn btn-primary" id="masCuautla">Ver m&aacutes...</button>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-2">
                 <div class="features-icons-item mx-auto mb-0 mb-lg-3">
                     <div>
                         <img src="${pageContext.request.contextPath}/img/yautepec.png" id="yautepec" with="100" height="100">
                     </div>
                     <h3>Yautepec</h3>
-                    <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+                    <button type="button" class="btn btn-primary" id="masYautepec">Ver m&aacutes...</button>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-2">
                 <div class="features-icons-item mx-auto mb-0 mb-lg-3">
                     <div>
                         <img src="${pageContext.request.contextPath}/img/tepoztlan.jpg" id="tepoztlan" with="100" height="100">
                     </div>
-                    <h3>Tepoztlan</h3>
-                    <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+                    <h3>Tepoztl&aacuten</h3>
+                    <button type="button" class="btn btn-primary" id="masTepoz">Ver m&aacutes...</button>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-2">
                 <div class="features-icons-item mx-auto mb-0 mb-lg-3">
                     <div>
                         <img src="${pageContext.request.contextPath}/img/amacuzac.jpg" id="amacuzac" with="100" height="100">
                     </div>
                     <h3>Amacuzac</h3>
-                    <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+                    <button type="button" class="btn btn-primary" id="masAmacuzac">Ver m&aacutes...</button>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-2">
                 <div class="features-icons-item mx-auto mb-0 mb-lg-3">
                     <div class="features-icons-icon d-flex">
                         <i class="icon-check m-auto text-primary"></i>
                     </div>
                     <h3>Novedades</h3>
-                    <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+                    <button type="button" class="btn btn-primary" id="masNovedades">Ver más...</button>
                 </div>
             </div>
         </div>
@@ -128,35 +115,35 @@
             <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/seguridad.jpeg');"></div>
             <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                 <h2>Seguridad</h2>
-                <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+                <p class="lead mb-0">¿Eres consciente de cuando gasta el gobierno en materia de seguridad? ¿sabes que casi la mitad de su presupuesto por estado se va a esto? Entra y descúbrelo.</p>
             </div>
         </div>
         <div class="row no-gutters">
             <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/transporte.jpeg');"></div>
             <div class="col-lg-6 my-auto showcase-text">
                 <h2>Servicios p&uacuteblicos</h2>
-                <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
+                <p class="lead mb-0">¿No tienes agua potable en tu colonia? ¿Las calles de donde vive no están pavimentadas? ¿Sabes cuando te están robando en servicios públicos? ¡Entra y descubre, exige tu drechos!</p>
             </div>
         </div>
         <div class="row no-gutters">
             <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/educacion.jpeg');"></div>
             <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                 <h2>Educaci&oacuten</h2>
-                <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+                <p class="lead mb-0">¿Sabes que universidad recibió más apoyo que otras? ¿Quieres conocer cuando dinero le dieron los directivos de la SEP?</p>
             </div>
         </div>
         <div class="row no-gutters">
             <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/salud.jpeg');"></div>
             <div class="col-lg-6 my-auto showcase-text">
                 <h2>Salud</h2>
-                <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
+                <p class="lead mb-0">¿Sabes a donde se fue el dinero del último hospital que se construyó? ¿Quieres saber quién se llevó el dinero para el abastecimiento de tus medicinas?</p>
             </div>
         </div>
         <div class="row no-gutters">
             <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/agricultura.jpeg');"></div>
             <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                 <h2>Agricultura</h2>
-                <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+                <p class="lead mb-0">¿Te interesa saber a dónde fue tu apoyo (dinero) para tu siembra? ¿Conocer como se distribuyen los abonos y tractores que “da el gobierno”?</p>
             </div>
         </div>
     </div>
@@ -198,16 +185,16 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-9 mx-auto">
-                <h2 class="mb-4">Ready to get started? Sign up now!</h2>
+                <h2 class="mb-4">¿Listo para empezar? Registrate</h2>
             </div>
             <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
                 <form>
                     <div class="form-row">
                         <div class="col-12 col-md-9 mb-2 mb-md-0">
-                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+                            <input type="email" class="form-control form-control-lg" placeholder="Ingresa tu correo...">
                         </div>
                         <div class="col-12 col-md-3">
-                            <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+                            <button type="submit" class="btn btn-block btn-lg btn-primary">Registrar</button>
                         </div>
                     </div>
                 </form>
