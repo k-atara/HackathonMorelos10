@@ -9,7 +9,7 @@ public class MySQLConnection {
         Connection connection = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String ipAddress = "localhost",port = "3306",user  = "root" ,password  = "";
+            String ipAddress = "localhost",port = "3306",user  = "root" ,password  = "root";
             connection = DriverManager.getConnection("jdbc:mysql://".concat(ipAddress).concat(":").concat(port).concat("/").concat(dbName).concat("?useSSL=false"), user, password);
         } catch (ClassNotFoundException e) {
             System.out.println(e.getMessage());
