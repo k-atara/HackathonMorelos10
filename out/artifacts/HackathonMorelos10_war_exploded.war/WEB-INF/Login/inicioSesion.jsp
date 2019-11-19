@@ -35,7 +35,7 @@
     <div class="overlay">
         <div class="wrapper">
             <div class="logo text-center top-bottom-gap">
-                <a class="brand-logo" href="index.html">Inicia sesi&oacuten en Iximati:</a>
+                <a class="brand-logo" href="index.html">Inicia sesi&oacute;n en Iximati:</a>
                 <!-- if logo is image enable this
         <a class="brand-logo" href="#index.html">
             <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />

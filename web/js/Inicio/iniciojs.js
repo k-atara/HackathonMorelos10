@@ -13,7 +13,7 @@ $(document).ready(() => {
                 $("#Informacion").submit();
 
     });
-    $(".btnInformacion").click(function () {
+    $(".btnReporteGeneral").click(function () {
 
         Swal.fire({
             title: 'Cargando...',
@@ -28,7 +28,7 @@ $(document).ready(() => {
         $("#Informacion").submit();
 
     });
-    $(".btnInformacionCuautla").click(function () {
+    $(".btnInformacionMunicipio").click(function () {
 
         Swal.fire({
             title: 'Cargando...',
@@ -38,10 +38,9 @@ $(document).ready(() => {
         });
 
         $("#Informacion").attr("action", "InicioController");
-        $("#accion").val("informacionCuautla");
+        $("#accion").val("informacionMunicipio");
         $("#Informacion").attr("method", "POST");
         $("#Informacion").submit();
 
     });
-
 });

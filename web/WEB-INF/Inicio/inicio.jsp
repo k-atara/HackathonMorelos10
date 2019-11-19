@@ -167,6 +167,19 @@
 <!-- Navigation -->
 <%@include file="../../navBar.jsp"%>
 
+<!-- Masthead -->
+<header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <h1 class="mb-5">Portal de Datos</h1>
+                <button type="submit" class="btn btn-primary btnReporteGeneral" >Reporte general</button>
+            </div>
+        </div>
+    </div>
+</header>
+
 <form id="Informacion">
     <input type="hidden" name="accion" id="accion">
 </form>
@@ -181,7 +194,7 @@
                         <img src="${pageContext.request.contextPath}/img/cuernavaca.png" id="cuernavaca" with="100" height="100">
                     </div>
                     <h3>Cuernavaca</h3>
-                    <button type="button" class="btn btn-primary btnInformacion" id="masCva">Ver m&aacutes...</button>
+                    <button type="button" class="btn btn-primary btnInformacionMunicipio" id="masCva">Ver m&aacutes...</button>
                 </div>
             </div>
             <div class="col-lg-2">
@@ -190,7 +203,7 @@
                         <img src="${pageContext.request.contextPath}/img/Cuautla.png" id="cuautla" with="100" height="100">
                     </div>
                     <h3>Cuautla</h3>
-                    <button type="button" class="btn btn-primary btnInformacionCuautla" id="masCuautla">Ver m&aacutes...</button>
+                    <button type="button" class="btn btn-primary btnInformacionMunicipio" id="masCuautla">Ver m&aacutes...</button>
                 </div>
             </div>
             <div class="col-lg-2">
@@ -199,7 +212,7 @@
                         <img src="${pageContext.request.contextPath}/img/yautepec.png" id="yautepec" with="100" height="100">
                     </div>
                     <h3>Yautepec</h3>
-                    <button type="button" class="btn btn-primary btnInformacion" id="masYautepec">Ver m&aacutes...</button>
+                    <button type="button" class="btn btn-primary btnInformacionMunicipio" id="masYautepec">Ver m&aacutes...</button>
                 </div>
             </div>
             <div class="col-lg-2">
@@ -208,7 +221,7 @@
                         <img src="${pageContext.request.contextPath}/img/tepoztlan.jpg" id="tepoztlan" with="100" height="100">
                     </div>
                     <h3>Tepoztl&aacuten</h3>
-                    <button type="button" class="btn btn-primary btnInformacion" id="masTepoz">Ver m&aacutes...</button>
+                    <button type="button" class="btn btn-primary btnInformacionMunicipio" id="masTepoz">Ver m&aacutes...</button>
                 </div>
             </div>
             <div class="col-lg-2">
@@ -217,7 +230,7 @@
                         <img src="${pageContext.request.contextPath}/img/amacuzac.jpg" id="amacuzac" with="100" height="100">
                     </div>
                     <h3>Amacuzac</h3>
-                    <button type="button" class="btn btn-primary btnInformacion" id="masAmacuzac">Ver m&aacutes...</button>
+                    <button type="button" class="btn btn-primary btnInformacionMunicipio" id="masAmacuzac">Ver m&aacutes...</button>
                 </div>
             </div>
             <div class="col-lg-2">
@@ -278,27 +291,27 @@
 <!-- Testimonials -->
 <section class="testimonials text-center bg-light">
     <div class="container">
-        <h2 class="mb-5">What people are saying...</h2>
+        <h2 class="mb-5">Lo que la gente dice...</h2>
         <div class="row">
             <div class="col-lg-4">
                 <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                     <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
                     <h5>Margaret E.</h5>
-                    <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+                    <p class="font-weight-light mb-0">"Esto es fant&aacute;stico, ¡Muchas gracias por la informaci&oacute;n!"</p>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                     <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
                     <h5>Fred S.</h5>
-                    <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+                    <p class="font-weight-light mb-0">"La plataforma es muy &uacute;til. La he estado usando para obtener m&aacute;s informaci&oacute;n"</p>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                     <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
                     <h5>Sarah W.</h5>
-                    <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+                    <p class="font-weight-light mb-0">"¡Muchas gracias por hacer que estos recursos est&eacute;n disponibles para nosotros!"</p>
                 </div>
             </div>
         </div>

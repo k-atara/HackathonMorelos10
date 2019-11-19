@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: AlienWare
@@ -21,7 +22,6 @@
     <script src="${pageContext.request.contextPath}/js/all.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/fontawesome.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/jquery-3.4.1.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/Informacion/informacionjs.js"></script>
 
     <!-- Custom fonts for this template -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
@@ -49,127 +49,72 @@
 <!-- Navigation -->
 <%@include file="../../navBar.jsp"%>
 
-<form id="InicioSesion">
+<!-- Masthead -->
+<header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <h1 class="mb-5">Portal de Datos</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<form id="Inicio">
     <input type="hidden" name="accion" id="accion">
 </form>
 
 <div class="container-fluid">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#" id="Contratos">Contratos <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="SectorPrivado">Sector privado</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="SectorPublico">Sector p&uacuteblico</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="Instrumentacion">Instrumentaci&oacuten</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
     <div class="card">
         <div class="col-md-12 ml-auto mr-auto text-center">
             <div class="card-header card-header-primary">
                 <div class="mt-1 ml-1" id="preview">
-                    <h1>Cuautla</h1>
+                    <h1>Cuernavaca</h1>
                 </div>
             </div>
         </div>
         <div class="card-body">
             <div class="row mt-3 mb-3">
-                <div class="col-lg-12 Contratos">
-                    <table id="tablaContratos" class="display" style="width:100%">
+                <div class="col-lg-12 Municipio">
+                    <table id="tablaMunicipio" class="display" style="width:100%">
                         <thead>
                         <tr>
-                            <th scope="col">Hiperv&iacutenculo Al Contrato, Convenio, Permiso, Licencia O Concesi&oacuten</th>
-                            <th scope="col">N&uacutemero de registros</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Tipo de Acto Jur&iacute;dico</th>
+                            <th scope="col">Objeto del Acto Jur&iacute;dico</th>
+                            <th scope="col">Fundamento del Acto Jur&iacute;dico</th>
+                            <th scope="col">Responsable de instrumentacion</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Periodo de Informe Inicio</th>
+                            <th scope="col">Periodo de Informe Fin</th>
+                            <th scope="col">Fecha de validacion</th>
+                            <th scope="col">Fecha de actualizaci&oacute;n</th>
+                            <th scope="col">Nota</th>
+                            <th scope="col">Link</th>
                         </tr>
                         </thead>
-                        <tbody id="cuerpoTablaContratos">
-
-
-                        </tbody>
-
-                    </table>
-                </div>
-                <div class="col-lg-12 SectorPrivado">
-                    <table id="tablaSectorPrivado" class="display" style="width:100%">
-                        <thead>
-                        <tr>
-                            <th scope="col">Ayuntamiento</th>
-                            <th scope="col">Sector Al Cual Se Otorgó El Acto Jurídico (catálogo)</th>
-                            <th scope="col">Número de registros</th>
-                        </tr>
-                        </thead>
-                        <tbody id="cuerpoTablaSectorPrivado">
-
-                        <tr>
-                            <td>Cuautla
-                            </td>
-                            <td>Privado</td>
-                            <td>1,000
-                            </td>
-                        </tr>
-
-                        </tbody>
-
-                    </table>
-                </div>
-                <div class="col-lg-12 SectorPublico">
-                    <table id="tablaSectorPublico" class="display" style="width:100%">
-                        <thead>
-                        <tr>
-                            <th scope="col">Ayuntamiento
-                            </th>
-                            <th scope="col">Sector Al Cual Se Otorgó El Acto Jurídico (catálogo)
-                            </th>
-                            <th scope="col">Número de registros
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody id="cuerpoTablaSectorPublico">
-
-                        <tr>
-
-                        </tr>
-
-                        </tbody>
-
-                    </table>
-                </div>
-                <div class="col-lg-12 Instrumentacion">
-                        <table id="tablaInstrumentacion" class="display" style="width:100%">
-                            <thead>
+                        <tbody id="cuerpoTablaMunicipio">
+                        <c:forEach items="${reportesMunicipio}" var="reporte">
                             <tr>
-                                <th scope="col">Ayuntamiento
-                                </th>
-                                <th scope="col">Unidad(es) O Área(s) Responsable(s) de Instrumentación
-                                </th>
-                                <th scope="col">Número de registros
-                                </th>
+                                <td>${reporte.idReporte}</td>
+                                <td>${reporte.municipio}</td>
+                                <td>${reporte.objetoAJ}</td>
+                                <td>${reporte.fundamentoAJ}</td>
+                                <td>${reporte.responsableInstrumentacion}</td>
+                                <td>${reporte.sectorAJ}</td>
+                                <td>${reporte.periodoInformeInicio}</td>
+                                <td>${reporte.periodoInformeFinal}</td>
+                                <td>${reporte.fechaValidacion}</td>
+                                <td>${reporte.fechaActualizacion}</td>
+                                <td>${reporte.nota}</td>
+                                <td><a href="${reporte.linkDocumento}">Documento</a></td>
                             </tr>
-                            </thead>
-                            <tbody id="cuerpoInstrumentacion">
+                        </c:forEach>
+                        </tbody>
 
-                            <tr>
-                                <td>Cuautla
-                                </td>
-                                <td>DIRECCION DE INDUSTRIA Y COMERCIO
-                                </td>
-                                <td>1,000
-                                </td>
-                            </tr>
-
-                            </tbody>
-
-                        </table>
+                    </table>
                 </div>
             </div>
         </div>

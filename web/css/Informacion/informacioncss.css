@@ -1,11 +1,30 @@
-.SectorPrivado{
+.Convenio{
     display: none;
 }
 
-.SectorPublico{
+.Licencia{
     display: none;
 }
 
-.Instrumentacion{
+.Contrato{
     display: none;
+}
+
+.Permiso{
+    display: none;
+}
+
+.Concesion{
+    display: none;
+}
+
+.Asignaciones{
+    display: none;
+}
+
+.scrollbar {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-right: 20px;
+    margin-left: 20px;
 }

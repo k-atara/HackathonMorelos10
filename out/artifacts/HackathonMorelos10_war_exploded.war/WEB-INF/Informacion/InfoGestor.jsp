@@ -1,5 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">
@@ -8,7 +8,6 @@
     <meta name="author" content="">
 
     <title>Informaci&oacuten</title>
-
 
     <script src="${pageContext.request.contextPath}/js/all.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/fontawesome.min.js"></script>
@@ -41,7 +40,19 @@
 <!-- Navigation -->
 <%@include file="../../navBar.jsp"%>
 
-<form id="InicioSesion">
+<!-- Masthead -->
+<header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <h1 class="mb-5">Portal de Datos</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<form id="Inicio">
     <input type="hidden" name="accion" id="accion">
 </form>
 
@@ -51,311 +62,297 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#" id="Contratos">Contratos <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" id="Autorizacion">Autorizaci&oacute;n<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" id="SectorPrivado">Sector privado</a>
+                    <a class="nav-link" href="#" id="Convenio">Convenio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" id="SectorPublico">Sector p&uacuteblico</a>
+                    <a class="nav-link" href="#" id="Licencia">Licencia</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" id="Instrumentacion">Instrumentaci&oacuten</a>
+                    <a class="nav-link" href="#" id="Contrato">Contrato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="Permiso">Permiso</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="Concesion">Concesi&oacute;n</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="Asignaciones">Asignaciones</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <div class="card">
-        <div class="col-md-12 ml-auto mr-auto text-center">
-            <div class="card-header card-header-primary">
-                <div class="mt-1 ml-1" id="preview">
-                    <h1>Cuernavaca</h1>
-                </div>
-            </div>
-        </div>
         <div class="card-body">
-            <div class="row mt-3 mb-3">
-                <div class="col-lg-12 Contratos">
-                    <table id="tablaContratos" class="display" style="width:100%">
-                        <thead>
+            <div class="row mt-3 mb-3 scrollbar">
+                <div class="col-lg-12 Autorizacion">
+                    <table id="tablaAutorizacion" class="table table-bordered">
+                        <thead class="table-primary">
                         <tr>
-                            <th scope="col">Hiperv&iacutenculo Al Contrato, Convenio, Permiso, Licencia O Concesi&oacuten</th>
-                            <th scope="col">N&uacutemero de registros</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Municipio</th>
+                            <th scope="col">Objeto del Acto Jur&iacute;dico</th>
+                            <th scope="col">Fundamento del Acto Jur&iacute;dico</th>
+                            <th scope="col">Responsable de instrumentacion</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Periodo de Informe Inicio</th>
+                            <th scope="col">Periodo de Informe Fin</th>
+                            <th scope="col">Fecha de validacion</th>
+                            <th scope="col">Fecha de actualizaci&oacute;n</th>
+                            <th scope="col">Nota</th>
+                            <th scope="col">Link</th>
                         </tr>
                         </thead>
-                        <tbody id="cuerpoTablaContratos">
-
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0002030405-.pdf
-                           ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0002030405-.pdf
-                            </a> </td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0002060782-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0002060782-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0002090698-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0002090698-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0002090699-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0002090699-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003012658-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003012658-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003012659-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003012659-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003030419-.pdf
-                                ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003030419-.pdf
-                                </a></td>
-                            <td>1</td>
-                        </tr><tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003160064-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003160064-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003170659-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003170659-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003300783-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003300783-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003300784-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003300784-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003310709-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003310709-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003310710-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003310710-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003310711-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003310711-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003370424-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003370424-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003420258-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003420258-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003430216-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003430216-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003481724-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003481724-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003501021-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003501021-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524042-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524042-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524043-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524043-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524044-.pdf
-                           ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524044-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524045-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524045-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524046-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524046-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524047-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524047-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524047-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524047-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524048-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524048-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524049-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524049-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524050-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524050-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524051-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524051-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524052-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524052-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524053-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524053-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524054-.pdf
-                            ">http://repositoriomorelos.mx/sites/default/files/Ayuntamientos/Cuernavaca/2018/Articulo51/LTAIPEM51_FXXVI_Las_concesiones_contratos_convenios_permisos_licencias_o_autorizaciones_otorgados/2019Abril/L0003524054-.pdf
-                            </a></td>
-                            <td>1</td>
-                        </tr>
-
+                        <tbody id="cuerpoTablaAutorizacion">
+                        <c:forEach items="${reportesAutorizacion}" var="reporte">
+                            <tr>
+                                <td>${reporte.idReporte}</td>
+                                <td>${reporte.municipio}</td>
+                                <td>${reporte.objetoAJ}</td>
+                                <td>${reporte.fundamentoAJ}</td>
+                                <td>${reporte.responsableInstrumentacion}</td>
+                                <td>${reporte.sectorAJ}</td>
+                                <td>${reporte.periodoInformeInicio}</td>
+                                <td>${reporte.periodoInformeFinal}</td>
+                                <td>${reporte.fechaValidacion}</td>
+                                <td>${reporte.fechaActualizacion}</td>
+                                <td>${reporte.nota}</td>
+                                <td><a href="${reporte.linkDocumento}">Documento</a></td>
+                            </tr>
+                        </c:forEach>
                         </tbody>
-
                     </table>
                 </div>
-                <div class="col-lg-12 SectorPrivado">
-                    <table id="tablaSectorPrivado" class="display" style="width:100%">
-                        <thead>
+                <div class="col-lg-12 Convenio">
+                    <table id="tablaConvenio"  class="table table-bordered">
+                        <thead class="table-primary">
                         <tr>
-                            <th scope="col">Ayuntamiento</th>
-                            <th scope="col">Sector Al Cual Se Otorgó El Acto Jurídico (catálogo)</th>
-                            <th scope="col">Número de registros</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Municipio</th>
+                            <th scope="col">Objeto del Acto Jur&iacute;dico</th>
+                            <th scope="col">Fundamento del Acto Jur&iacute;dico</th>
+                            <th scope="col">Responsable de instrumentacion</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Periodo de Informe Inicio</th>
+                            <th scope="col">Periodo de Informe Fin</th>
+                            <th scope="col">Fecha de validacion</th>
+                            <th scope="col">Fecha de actualizaci&oacute;n</th>
+                            <th scope="col">Nota</th>
+                            <th scope="col">Link</th>
                         </tr>
                         </thead>
-                        <tbody id="cuerpoTablaSectorPrivado">
-
-                        <tr>
-                            <td>Cuernavaca</td>
-                            <td>Privado</td>
-                            <td>866</td>
-                        </tr>
-
+                        <tbody id="cuerpoTablaConvenio">
+                        <c:forEach items="${reportesConvenio}" var="reporte">
+                            <tr>
+                                <td>${reporte.idReporte}</td>
+                                <td>${reporte.municipio}</td>
+                                <td>${reporte.objetoAJ}</td>
+                                <td>${reporte.fundamentoAJ}</td>
+                                <td>${reporte.responsableInstrumentacion}</td>
+                                <td>${reporte.sectorAJ}</td>
+                                <td>${reporte.periodoInformeInicio}</td>
+                                <td>${reporte.periodoInformeFinal}</td>
+                                <td>${reporte.fechaValidacion}</td>
+                                <td>${reporte.fechaActualizacion}</td>
+                                <td>${reporte.nota}</td>
+                                <td><a href="${reporte.linkDocumento}">Documento</a></td>
+                            </tr>
+                        </c:forEach>
                         </tbody>
-
                     </table>
             </div>
-                <div class="col-lg-12 SectorPublico">
-                    <table id="tablaSectorPublico" class="display" style="width:100%">
-                        <thead>
+                <div class="col-lg-12 Licencia">
+                    <table id="tablaLicencia"  class="table table-bordered">
+                        <thead class="table-primary">
                         <tr>
-                            <th scope="col">Ayuntamiento
-                            </th>
-                            <th scope="col">Sector Al Cual Se Otorgó El Acto Jurídico (catálogo)
-                            </th>
-                            <th scope="col">Número de registros
-                            </th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Municipio</th>
+                            <th scope="col">Objeto del Acto Jur&iacute;dico</th>
+                            <th scope="col">Fundamento del Acto Jur&iacute;dico</th>
+                            <th scope="col">Responsable de instrumentacion</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Periodo de Informe Inicio</th>
+                            <th scope="col">Periodo de Informe Fin</th>
+                            <th scope="col">Fecha de validacion</th>
+                            <th scope="col">Fecha de actualizaci&oacute;n</th>
+                            <th scope="col">Nota</th>
+                            <th scope="col">Link</th>
                         </tr>
                         </thead>
-                        <tbody id="cuerpoTablaSectorPublico">
-
-                        <tr>
-
-                        </tr>
-
+                        <tbody id="cuerpoTablaLicencia">
+                        <c:forEach items="${reportesLicencia}" var="reporte">
+                            <tr>
+                                <td>${reporte.idReporte}</td>
+                                <td>${reporte.municipio}</td>
+                                <td>${reporte.objetoAJ}</td>
+                                <td>${reporte.fundamentoAJ}</td>
+                                <td>${reporte.responsableInstrumentacion}</td>
+                                <td>${reporte.sectorAJ}</td>
+                                <td>${reporte.periodoInformeInicio}</td>
+                                <td>${reporte.periodoInformeFinal}</td>
+                                <td>${reporte.fechaValidacion}</td>
+                                <td>${reporte.fechaActualizacion}</td>
+                                <td>${reporte.nota}</td>
+                                <td><a href="${reporte.linkDocumento}">Documento</a></td>
+                            </tr>
+                        </c:forEach>
                         </tbody>
-
                     </table>
                 </div>
-                <div class="col-lg-12 Instrumentacion">
-                    <table id="tablaInstrumentacion" class="display" style="width:100%">
-                        <thead>
+                <div class="col-lg-12 Contrato">
+                    <table id="tablaContrato"  class="table table-bordered">
+                        <thead class="table-primary">
                         <tr>
-                            <th scope="col">Ayuntamiento
-                            </th>
-                            <th scope="col">Unidad(es) O Área(s) Responsable(s) de Instrumentación
-                            </th>
-                            <th scope="col">Número de registros
-                            </th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Municipio</th>
+                            <th scope="col">Objeto del Acto Jur&iacute;dico</th>
+                            <th scope="col">Fundamento del Acto Jur&iacute;dico</th>
+                            <th scope="col">Responsable de instrumentacion</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Periodo de Informe Inicio</th>
+                            <th scope="col">Periodo de Informe Fin</th>
+                            <th scope="col">Fecha de validacion</th>
+                            <th scope="col">Fecha de actualizaci&oacute;n</th>
+                            <th scope="col">Nota</th>
+                            <th scope="col">Link</th>
                         </tr>
                         </thead>
-                        <tbody id="cuerpoInstrumentacion">
-
-                        <tr>
-                            <td>Cuernavaca
-                            </td>
-                            <td>DIRECCION DE LICENCIAS DE FUNCIONAMIENTO
-                            </td>
-                            <td>866
-                            </td>
-                        </tr>
-
+                        <tbody id="cuerpoContrato">
+                        <c:forEach items="${reportesContrato}" var="reporte">
+                            <tr>
+                                <td>${reporte.idReporte}</td>
+                                <td>${reporte.municipio}</td>
+                                <td>${reporte.objetoAJ}</td>
+                                <td>${reporte.fundamentoAJ}</td>
+                                <td>${reporte.responsableInstrumentacion}</td>
+                                <td>${reporte.sectorAJ}</td>
+                                <td>${reporte.periodoInformeInicio}</td>
+                                <td>${reporte.periodoInformeFinal}</td>
+                                <td>${reporte.fechaValidacion}</td>
+                                <td>${reporte.fechaActualizacion}</td>
+                                <td>${reporte.nota}</td>
+                                <td><a href="${reporte.linkDocumento}">Documento</a></td>
+                            </tr>
+                        </c:forEach>
                         </tbody>
-
+                    </table>
+                </div>
+                <div class="col-lg-12 Permiso">
+                    <table id="tablaPermiso" class="table table-bordered">
+                        <thead class="table-primary">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Municipio</th>
+                            <th scope="col">Objeto del Acto Jur&iacute;dico</th>
+                            <th scope="col">Fundamento del Acto Jur&iacute;dico</th>
+                            <th scope="col">Responsable de instrumentacion</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Periodo de Informe Inicio</th>
+                            <th scope="col">Periodo de Informe Fin</th>
+                            <th scope="col">Fecha de validacion</th>
+                            <th scope="col">Fecha de actualizaci&oacute;n</th>
+                            <th scope="col">Nota</th>
+                            <th scope="col">Link</th>
+                        </tr>
+                        </thead>
+                        <tbody id="cuerpoPermiso">
+                        <c:forEach items="${reportesPermiso}" var="reporte">
+                            <tr>
+                                <td>${reporte.idReporte}</td>
+                                <td>${reporte.municipio}</td>
+                                <td>${reporte.objetoAJ}</td>
+                                <td>${reporte.fundamentoAJ}</td>
+                                <td>${reporte.responsableInstrumentacion}</td>
+                                <td>${reporte.sectorAJ}</td>
+                                <td>${reporte.periodoInformeInicio}</td>
+                                <td>${reporte.periodoInformeFinal}</td>
+                                <td>${reporte.fechaValidacion}</td>
+                                <td>${reporte.fechaActualizacion}</td>
+                                <td>${reporte.nota}</td>
+                                <td><a href="${reporte.linkDocumento}">Documento</a></td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-12 Concesion">
+                    <table id="tablaConcesion" class="table table-bordered">
+                        <thead class="table-primary">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Municipio</th>
+                            <th scope="col">Objeto del Acto Jur&iacute;dico</th>
+                            <th scope="col">Fundamento del Acto Jur&iacute;dico</th>
+                            <th scope="col">Responsable de instrumentacion</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Periodo de Informe Inicio</th>
+                            <th scope="col">Periodo de Informe Fin</th>
+                            <th scope="col">Fecha de validacion</th>
+                            <th scope="col">Fecha de actualizaci&oacute;n</th>
+                            <th scope="col">Nota</th>
+                            <th scope="col">Link</th>
+                        </tr>
+                        </thead>
+                        <tbody id="cuerpoConcesion">
+                        <c:forEach items="${reportesConcesion}" var="reporte">
+                            <tr>
+                                <td>${reporte.idReporte}</td>
+                                <td>${reporte.municipio}</td>
+                                <td>${reporte.objetoAJ}</td>
+                                <td>${reporte.fundamentoAJ}</td>
+                                <td>${reporte.responsableInstrumentacion}</td>
+                                <td>${reporte.sectorAJ}</td>
+                                <td>${reporte.periodoInformeInicio}</td>
+                                <td>${reporte.periodoInformeFinal}</td>
+                                <td>${reporte.fechaValidacion}</td>
+                                <td>${reporte.fechaActualizacion}</td>
+                                <td>${reporte.nota}</td>
+                                <td><a href="${reporte.linkDocumento}">Documento</a></td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-12 Asignaciones">
+                    <table id="tablaAsignaciones" class="table table-bordered">
+                        <thead class="table-primary">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Municipio</th>
+                            <th scope="col">Objeto del Acto Jur&iacute;dico</th>
+                            <th scope="col">Fundamento del Acto Jur&iacute;dico</th>
+                            <th scope="col">Responsable de instrumentacion</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Periodo de Informe Inicio</th>
+                            <th scope="col">Periodo de Informe Fin</th>
+                            <th scope="col">Fecha de validacion</th>
+                            <th scope="col">Fecha de actualizaci&oacute;n</th>
+                            <th scope="col">Nota</th>
+                            <th scope="col">Link</th>
+                        </tr>
+                        </thead>
+                        <tbody id="cuerpoAsignaciones">
+                        <c:forEach items="${reportesAsignaciones}" var="reporte">
+                            <tr>
+                                <td>${reporte.idReporte}</td>
+                                <td>${reporte.municipio}</td>
+                                <td>${reporte.objetoAJ}</td>
+                                <td>${reporte.fundamentoAJ}</td>
+                                <td>${reporte.responsableInstrumentacion}</td>
+                                <td>${reporte.sectorAJ}</td>
+                                <td>${reporte.periodoInformeInicio}</td>
+                                <td>${reporte.periodoInformeFinal}</td>
+                                <td>${reporte.fechaValidacion}</td>
+                                <td>${reporte.fechaActualizacion}</td>
+                                <td>${reporte.nota}</td>
+                                <td><a href="${reporte.linkDocumento}">Documento</a></td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
                     </table>
                 </div>
             </div>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 <head>
 
@@ -39,7 +40,19 @@
 <!-- Navigation -->
 <%@include file="../../navBar.jsp"%>
 
-<form id="InicioSesion">
+<!-- Masthead -->
+<header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <h1 class="mb-5">Portal de Datos</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<form id="Inicio">
     <input type="hidden" name="accion" id="accion">
 </form>
 
@@ -49,103 +62,297 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#" id="Contratos">Contratos <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" id="Autorizacion">Autorizaci&oacute;n<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" id="SectorPrivado">Sector privado</a>
+                    <a class="nav-link" href="#" id="Convenio">Convenio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" id="SectorPublico">Sector p&uacuteblico</a>
+                    <a class="nav-link" href="#" id="Licencia">Licencia</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" id="Instrumentacion">Instrumentaci&oacuten</a>
+                    <a class="nav-link" href="#" id="Contrato">Contrato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="Permiso">Permiso</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="Concesion">Concesi&oacute;n</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="Asignaciones">Asignaciones</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <div class="card">
-        <div class="col-md-12 ml-auto mr-auto text-center">
-            <div class="card-header card-header-primary">
-                <div class="mt-1 ml-1" id="preview">
-                    <h1>Cuernavaca</h1>
-                </div>
-            </div>
-        </div>
         <div class="card-body">
-            <div class="row mt-3 mb-3">
-                <div class="col-lg-12 Contratos">
-                    <table id="tablaContratos" class="display" style="width:100%">
-                        <thead>
+            <div class="row mt-3 mb-3 scrollbar">
+                <div class="col-lg-12 Autorizacion">
+                    <table id="tablaAutorizacion" class="table table-bordered">
+                        <thead class="table-primary">
                         <tr>
-                            <th scope="col">Hiperv&iacutenculo Al Contrato, Convenio, Permiso, Licencia O Concesi&oacuten</th>
-                            <th scope="col">N&uacutemero de registros</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Municipio</th>
+                            <th scope="col">Objeto del Acto Jur&iacute;dico</th>
+                            <th scope="col">Fundamento del Acto Jur&iacute;dico</th>
+                            <th scope="col">Responsable de instrumentacion</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Periodo de Informe Inicio</th>
+                            <th scope="col">Periodo de Informe Fin</th>
+                            <th scope="col">Fecha de validacion</th>
+                            <th scope="col">Fecha de actualizaci&oacute;n</th>
+                            <th scope="col">Nota</th>
+                            <th scope="col">Link</th>
                         </tr>
                         </thead>
-                        <tbody id="cuerpoTablaContratos">
-
+                        <tbody id="cuerpoTablaAutorizacion">
+                        <c:forEach items="${reportesAutorizacion}" var="reporte">
+                            <tr>
+                                <td>${reporte.idReporte}</td>
+                                <td>${reporte.municipio}</td>
+                                <td>${reporte.objetoAJ}</td>
+                                <td>${reporte.fundamentoAJ}</td>
+                                <td>${reporte.responsableInstrumentacion}</td>
+                                <td>${reporte.sectorAJ}</td>
+                                <td>${reporte.periodoInformeInicio}</td>
+                                <td>${reporte.periodoInformeFinal}</td>
+                                <td>${reporte.fechaValidacion}</td>
+                                <td>${reporte.fechaActualizacion}</td>
+                                <td>${reporte.nota}</td>
+                                <td><a href="${reporte.linkDocumento}">Documento</a></td>
+                            </tr>
+                        </c:forEach>
                         </tbody>
-
                     </table>
                 </div>
-                <div class="col-lg-12 SectorPrivado">
-                    <table id="tablaSectorPrivado" class="display" style="width:100%">
-                        <thead>
+                <div class="col-lg-12 Convenio">
+                    <table id="tablaConvenio"  class="table table-bordered">
+                        <thead class="table-primary">
                         <tr>
-                            <th scope="col">Ayuntamiento</th>
-                            <th scope="col">Sector Al Cual Se Otorgó El Acto Jurídico (catálogo)</th>
-                            <th scope="col">Número de registros</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Municipio</th>
+                            <th scope="col">Objeto del Acto Jur&iacute;dico</th>
+                            <th scope="col">Fundamento del Acto Jur&iacute;dico</th>
+                            <th scope="col">Responsable de instrumentacion</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Periodo de Informe Inicio</th>
+                            <th scope="col">Periodo de Informe Fin</th>
+                            <th scope="col">Fecha de validacion</th>
+                            <th scope="col">Fecha de actualizaci&oacute;n</th>
+                            <th scope="col">Nota</th>
+                            <th scope="col">Link</th>
                         </tr>
                         </thead>
-                        <tbody id="cuerpoTablaSectorPrivado">
-
+                        <tbody id="cuerpoTablaConvenio">
+                        <c:forEach items="${reportesConvenio}" var="reporte">
+                            <tr>
+                                <td>${reporte.idReporte}</td>
+                                <td>${reporte.municipio}</td>
+                                <td>${reporte.objetoAJ}</td>
+                                <td>${reporte.fundamentoAJ}</td>
+                                <td>${reporte.responsableInstrumentacion}</td>
+                                <td>${reporte.sectorAJ}</td>
+                                <td>${reporte.periodoInformeInicio}</td>
+                                <td>${reporte.periodoInformeFinal}</td>
+                                <td>${reporte.fechaValidacion}</td>
+                                <td>${reporte.fechaActualizacion}</td>
+                                <td>${reporte.nota}</td>
+                                <td><a href="${reporte.linkDocumento}">Documento</a></td>
+                            </tr>
+                        </c:forEach>
                         </tbody>
-
                     </table>
             </div>
-                <div class="col-lg-12 SectorPublico">
-                    <table id="tablaSectorPublico" class="display" style="width:100%">
-                        <thead>
+                <div class="col-lg-12 Licencia">
+                    <table id="tablaLicencia"  class="table table-bordered">
+                        <thead class="table-primary">
                         <tr>
-                            <th scope="col">Ayuntamiento
-                            </th>
-                            <th scope="col">Sector Al Cual Se Otorgó El Acto Jurídico (catálogo)
-                            </th>
-                            <th scope="col">Número de registros
-                            </th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Municipio</th>
+                            <th scope="col">Objeto del Acto Jur&iacute;dico</th>
+                            <th scope="col">Fundamento del Acto Jur&iacute;dico</th>
+                            <th scope="col">Responsable de instrumentacion</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Periodo de Informe Inicio</th>
+                            <th scope="col">Periodo de Informe Fin</th>
+                            <th scope="col">Fecha de validacion</th>
+                            <th scope="col">Fecha de actualizaci&oacute;n</th>
+                            <th scope="col">Nota</th>
+                            <th scope="col">Link</th>
                         </tr>
                         </thead>
-                        <tbody id="cuerpoTablaSectorPublico">
-
+                        <tbody id="cuerpoTablaLicencia">
+                        <c:forEach items="${reportesLicencia}" var="reporte">
+                            <tr>
+                                <td>${reporte.idReporte}</td>
+                                <td>${reporte.municipio}</td>
+                                <td>${reporte.objetoAJ}</td>
+                                <td>${reporte.fundamentoAJ}</td>
+                                <td>${reporte.responsableInstrumentacion}</td>
+                                <td>${reporte.sectorAJ}</td>
+                                <td>${reporte.periodoInformeInicio}</td>
+                                <td>${reporte.periodoInformeFinal}</td>
+                                <td>${reporte.fechaValidacion}</td>
+                                <td>${reporte.fechaActualizacion}</td>
+                                <td>${reporte.nota}</td>
+                                <td><a href="${reporte.linkDocumento}">Documento</a></td>
+                            </tr>
+                        </c:forEach>
                         </tbody>
-
                     </table>
                 </div>
-                <div class="col-lg-12 Instrumentacion">
-                    <table id="tablaInstrumentacion" class="display" style="width:100%">
-                        <thead>
+                <div class="col-lg-12 Contrato">
+                    <table id="tablaContrato"  class="table table-bordered">
+                        <thead class="table-primary">
                         <tr>
-                            <th scope="col">Ayuntamiento
-                            </th>
-                            <th scope="col">Unidad(es) O Área(s) Responsable(s) de Instrumentación
-                            </th>
-                            <th scope="col">Número de registros
-                            </th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Municipio</th>
+                            <th scope="col">Objeto del Acto Jur&iacute;dico</th>
+                            <th scope="col">Fundamento del Acto Jur&iacute;dico</th>
+                            <th scope="col">Responsable de instrumentacion</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Periodo de Informe Inicio</th>
+                            <th scope="col">Periodo de Informe Fin</th>
+                            <th scope="col">Fecha de validacion</th>
+                            <th scope="col">Fecha de actualizaci&oacute;n</th>
+                            <th scope="col">Nota</th>
+                            <th scope="col">Link</th>
                         </tr>
                         </thead>
-                        <tbody id="cuerpoInstrumentacion">
-
-                        <tr>
-                            <td>Cuernavaca
-                            </td>
-                            <td>DIRECCION DE LICENCIAS DE FUNCIONAMIENTO
-                            </td>
-                            <td>866
-                            </td>
-                        </tr>
-
+                        <tbody id="cuerpoContrato">
+                        <c:forEach items="${reportesContrato}" var="reporte">
+                            <tr>
+                                <td>${reporte.idReporte}</td>
+                                <td>${reporte.municipio}</td>
+                                <td>${reporte.objetoAJ}</td>
+                                <td>${reporte.fundamentoAJ}</td>
+                                <td>${reporte.responsableInstrumentacion}</td>
+                                <td>${reporte.sectorAJ}</td>
+                                <td>${reporte.periodoInformeInicio}</td>
+                                <td>${reporte.periodoInformeFinal}</td>
+                                <td>${reporte.fechaValidacion}</td>
+                                <td>${reporte.fechaActualizacion}</td>
+                                <td>${reporte.nota}</td>
+                                <td><a href="${reporte.linkDocumento}">Documento</a></td>
+                            </tr>
+                        </c:forEach>
                         </tbody>
-
+                    </table>
+                </div>
+                <div class="col-lg-12 Permiso">
+                    <table id="tablaPermiso" class="table table-bordered">
+                        <thead class="table-primary">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Municipio</th>
+                            <th scope="col">Objeto del Acto Jur&iacute;dico</th>
+                            <th scope="col">Fundamento del Acto Jur&iacute;dico</th>
+                            <th scope="col">Responsable de instrumentacion</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Periodo de Informe Inicio</th>
+                            <th scope="col">Periodo de Informe Fin</th>
+                            <th scope="col">Fecha de validacion</th>
+                            <th scope="col">Fecha de actualizaci&oacute;n</th>
+                            <th scope="col">Nota</th>
+                            <th scope="col">Link</th>
+                        </tr>
+                        </thead>
+                        <tbody id="cuerpoPermiso">
+                        <c:forEach items="${reportesPermiso}" var="reporte">
+                            <tr>
+                                <td>${reporte.idReporte}</td>
+                                <td>${reporte.municipio}</td>
+                                <td>${reporte.objetoAJ}</td>
+                                <td>${reporte.fundamentoAJ}</td>
+                                <td>${reporte.responsableInstrumentacion}</td>
+                                <td>${reporte.sectorAJ}</td>
+                                <td>${reporte.periodoInformeInicio}</td>
+                                <td>${reporte.periodoInformeFinal}</td>
+                                <td>${reporte.fechaValidacion}</td>
+                                <td>${reporte.fechaActualizacion}</td>
+                                <td>${reporte.nota}</td>
+                                <td><a href="${reporte.linkDocumento}">Documento</a></td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-12 Concesion">
+                    <table id="tablaConcesion" class="table table-bordered">
+                        <thead class="table-primary">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Municipio</th>
+                            <th scope="col">Objeto del Acto Jur&iacute;dico</th>
+                            <th scope="col">Fundamento del Acto Jur&iacute;dico</th>
+                            <th scope="col">Responsable de instrumentacion</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Periodo de Informe Inicio</th>
+                            <th scope="col">Periodo de Informe Fin</th>
+                            <th scope="col">Fecha de validacion</th>
+                            <th scope="col">Fecha de actualizaci&oacute;n</th>
+                            <th scope="col">Nota</th>
+                            <th scope="col">Link</th>
+                        </tr>
+                        </thead>
+                        <tbody id="cuerpoConcesion">
+                        <c:forEach items="${reportesConcesion}" var="reporte">
+                            <tr>
+                                <td>${reporte.idReporte}</td>
+                                <td>${reporte.municipio}</td>
+                                <td>${reporte.objetoAJ}</td>
+                                <td>${reporte.fundamentoAJ}</td>
+                                <td>${reporte.responsableInstrumentacion}</td>
+                                <td>${reporte.sectorAJ}</td>
+                                <td>${reporte.periodoInformeInicio}</td>
+                                <td>${reporte.periodoInformeFinal}</td>
+                                <td>${reporte.fechaValidacion}</td>
+                                <td>${reporte.fechaActualizacion}</td>
+                                <td>${reporte.nota}</td>
+                                <td><a href="${reporte.linkDocumento}">Documento</a></td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-12 Asignaciones">
+                    <table id="tablaAsignaciones" class="table table-bordered">
+                        <thead class="table-primary">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Municipio</th>
+                            <th scope="col">Objeto del Acto Jur&iacute;dico</th>
+                            <th scope="col">Fundamento del Acto Jur&iacute;dico</th>
+                            <th scope="col">Responsable de instrumentacion</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Periodo de Informe Inicio</th>
+                            <th scope="col">Periodo de Informe Fin</th>
+                            <th scope="col">Fecha de validacion</th>
+                            <th scope="col">Fecha de actualizaci&oacute;n</th>
+                            <th scope="col">Nota</th>
+                            <th scope="col">Link</th>
+                        </tr>
+                        </thead>
+                        <tbody id="cuerpoAsignaciones">
+                        <c:forEach items="${reportesAsignaciones}" var="reporte">
+                            <tr>
+                                <td>${reporte.idReporte}</td>
+                                <td>${reporte.municipio}</td>
+                                <td>${reporte.objetoAJ}</td>
+                                <td>${reporte.fundamentoAJ}</td>
+                                <td>${reporte.responsableInstrumentacion}</td>
+                                <td>${reporte.sectorAJ}</td>
+                                <td>${reporte.periodoInformeInicio}</td>
+                                <td>${reporte.periodoInformeFinal}</td>
+                                <td>${reporte.fechaValidacion}</td>
+                                <td>${reporte.fechaActualizacion}</td>
+                                <td>${reporte.nota}</td>
+                                <td><a href="${reporte.linkDocumento}">Documento</a></td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
                     </table>
                 </div>
             </div>
